@@ -5,3 +5,4 @@ of 1 to 10 ...
 how would you rate your pain?
 Very Good, have a lollipop
 Are you satisfied with your care?
+Yes I am
