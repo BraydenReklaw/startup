@@ -1,2 +1,3 @@
 # startup
 ## The Pitch
+***Abdenry's Townmaker***, a simple and clean quick-access notekeeper for the creatives who need to think up a small village or bustling tavern on the fly. A random building generator allows you to quickly create and plot out a settlement (*up to 25 buildings per settlement*), allowing for endless townbuilding inspiration, while a *custom building* option allows you to record custom buildings in your notebook and craft your village building by building, perfect for the note-frenzied Dungeon Master and the aspiring worldbuilder. You will also be notified of new towns that have been created by other Settlers and be able to preview their plots.
