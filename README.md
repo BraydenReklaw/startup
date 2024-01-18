@@ -1,6 +1,6 @@
 # startup
 ## The Pitch
-**Spidernotes** is the solution to the conspiracy theorist needing to transition to the digital age. The application gives you the ability to create *mindmaps*, complete with digital strings to link events, persons and places for whatever web you need to create to organize your ideas. This allows the chronically online author or worldbuilder to quickly create and access relationship maps and link ideas and concepts in a visual way. The application ties each map to your own user account, but you can also see live global statistics for how many threads have been laid, and what percentage of them has been your contribution.
+**Spidernotes** is the solution to the conspiracy theorist needing to transition to the digital age. The application gives you the ability to create spider web *mindmaps*, complete with digital strings to link events, persons and places for whatever web you need to create to organize your ideas. This allows the chronically online author or worldbuilder to quickly create and access relationship maps and link ideas and concepts in a visual way. The application ties each map to your own user account, but you can also see live global statistics for how many threads have been laid, and what percentage of them has been your contribution, allowing you to see your impact on the larger spiderweb.
 
 ![SpiderNotesWebMap](spidernotes.jpg)
 
