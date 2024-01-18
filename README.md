@@ -1,6 +1,9 @@
 # startup
 ## The Pitch
 **Spidernotes** is the solution to the conspiracy theorist needing to transition to the digital age. The application gives you the ability to create *mindmaps*, complete with digital strings to link events, persons and places for whatever web you need to create to organize your ideas. This allows the chronically online author or worldbuilder to quickly create and access relationship maps and link ideas and concepts in a visual way. The application ties each map to your own user account, but you can also see live global statistics for how many threads have been laid, and what percentage of them has been your contribution.
+
+![SpiderNotesWebMap](spidernotes.jpg)
+
 ## Key Features
 - Secure User account creation and authentication
 - A Map page with an area to "pin notes" on and a create note button. Name it and give it a description, then drag and place on the map grid. (*only the name will be displayed*). Hover on a note to see the description.
@@ -21,4 +24,8 @@ Backend service with endpoints for:
 - adding notes and threads
 - updating statistics
 ### DB/Login
-store map upon login as a dictionary of name:description in array of arrays, with threads stored as pointers to different "cells".
+store map upon logout in array of arrays, with threads stored as pointers to different "cells", recalling map upon login credential verfication. Stores and updates thread statistics.
+### WebSocket
+As each new thread is made, a global statistic is updated across all users and displayed to them.
+### React 
+Application will be ported to React web framework use.
