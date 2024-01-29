@@ -14,3 +14,5 @@ server instance name - cs260-spider-startup
 Domain Names: use .click for cheaper options  
 verify the email  
 The IP address should be used as http://[IP address]
+## HTML
+**remember that page 1 is index.html**
