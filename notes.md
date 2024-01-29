@@ -16,3 +16,4 @@ verify the email
 The IP address should be used as http://[IP address]
 ## HTML
 **remember that page 1 is index.html**
+<ht /> creates line across page (breaks up the page between header, main, and footer
