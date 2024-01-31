@@ -17,3 +17,6 @@ The IP address should be used as http://[IP address]
 ## HTML
 **remember that page 1 is index.html**
 <ht /> creates line across page (breaks up the page between header, main, and footer
+## CSS
+Cascading Style Sheet. Can be applied as a style html tag in the html sheet, an inline attribute, or stored on a separate file. Precedence is important. What is defined above will continue until redefined below. CSS works under a box model (outside -> 
+in: Margin, Border, Padding, object), or Pals Before Marriage (inside -> out)
