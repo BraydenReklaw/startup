@@ -7,6 +7,7 @@
 </head>
 <header>
     <h1>Spidernotes</h1>
+    <h3>Count the Threads</h3>
     <nav>
         <a href="index.html">Login</a>
         <a href="webmap.html">Webmap</a>
@@ -16,7 +17,16 @@
     <hr />
 </header>
 <body>
-    
+    <!-- This will be the biggest bit of websocket, pulling thread counts from other users to create a pie chart of
+    thread laying statistics -->
+    <p>A Web must be made up of tens, hundreds, even thousands of threads to function.</p>
+    <div id="global-stat">17 spiders have now laid 80 threads</div>
+    <div id="self-stat">You have laid: 16 threads</div>
+    <div id="piegraph"> <!--this is meant to represent the pie chart, which will be generated with Javascript, or an API-->
+        <svg width="200" height="200">
+            <circle r="10" cx="10" cy="10" fill="grey" />
+        </svg>
+    </div>
 </body>
 <footer>
     <hr />
