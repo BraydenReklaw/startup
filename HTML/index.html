@@ -8,14 +8,21 @@
 <header>
     <h1>Spidernotes</h1>
     <h3>Welcome to the Web</h3>
-    <a href="index.html">Login</a>
-    <a href="webmap.html">Webmap</a>
-    <a href="stats.html">Statistics</a>
-    <a href="about.html">About</a>
+    <nav>
+        <a href="index.html">Login</a>
+        <a href="webmap.html">Webmap</a>
+        <a href="stats.html">Statistics</a>
+        <a href="about.html">About</a>
+    </nav>
     <hr />
 </header>
 <body>
-    
+    <p>Welcome aspiring Spider. Login to start creating your web:</p>
+    <form method="get" action="webmap.html">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your name here" />
+        <button type="submit">Login</button>
+      </form>
 </body>
 <footer>
     <hr />
