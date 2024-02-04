@@ -29,3 +29,12 @@ store map upon logout in array of arrays, with threads stored as pointers to dif
 As each new thread is made, a global statistic is updated across all users and displayed to them.
 ### React 
 Application will be ported to React web framework use.
+
+## HTML Deliverable
+For this Deliverable I built the HTML structure of my startup.
+- HTML pages - 4 HTML pages representing login, map creation, statistics, and an about page
+- Links - every page contains crosslinks for all other pages. Logging in takes you to the webmap page
+- Text - the about page and statistics pages are described by and contain text. Note contents are shared in an example, but will be hidden until the lable is hoverd over
+- Images - used as an example in the about page (srced from URL). Threads between notes are shown as a div as an example, but aren't plotted yet
+- DB/Login - input and submit for login, input and submit for note creation, which will be stored and recalled from database upon login.
+- Websocket - statistics page data will be updated in real time
