@@ -5,148 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<header>
-    <h1>Spidernotes</h1>
-    <h3>Build your Web</h3>
-    <nav>
-        <a href="index.html">Login</a>
-        <a href="webmap.html">Webmap</a>
-        <a href="stats.html">Statistics</a>
-        <a href="about.html">About</a>
-    </nav>
-    <hr />
-</header>
 <body>
-    <!-- This will become actual CSS later -->
-    <style>
-        table {
-            background-color: lightgrey;
-            width: 80%;
-        }
-        tr, td {
-            border: 1px dotted;
-            height: 100px;
-            width: 100px;
-            background-color: white;
-        }
-        #legend {
-            background-color: lightgrey;
-            width: 100px;
-            transform: translate(1000%, 0); 
-        }
-        #threadL {
-            background-color:red;
-        }
-        #UI {
-            width: 100px;
-            transform: translate(1055%, 0)
-        }
-        #ncreate {
-            border: dashed grey;
-        }
-        .note {
-            text-align:center;
-            background-color: beige;
-        }
-    </style>
-    <main>
-        <!-- This will with JS work to create the threads between elements -->
-        <div class="thread" style="background-color: red; text-align:center;">***thread***</div>
-        <table>
-            <tr>
-                <td id="b1"></td>
-                <td id="b2"><div class="note">MOM</div></td>
-                <!-- the Note class will display contents upon cursor hover. Likely will use an API for the drag/drop features-->
-                <td id="b3"></td>
-                <td id="b4"></td>
-                <td id="b5"></td>
-            </tr>
-            <tr>
-                <td id="b6"></td>
-                <td id="b7"></td>
-                <td id="b8"></td>
-                <td id="b9"></td>
-                <td id="b10"></td>
-            </tr>
-            <tr>
-                <td id="b11"></td>
-                <td id="b12"></td>
-                <td id="b13"><div class="note">DAD</div></td>
-                <td id="b14"></td>
-                <td id="b15"></td>
-            </tr>
-            <tr>
-                <td id="b16"></td>
-                <td id="b17"></td>
-                <td id="b18"></td>
-                <td id="b19"></td>
-                <td id="b20"></td>
-            </tr>
-            <tr>
-                <td id="b21"></td>
-                <td id="b22"></td>
-                <td id="b23"></td>
-                <td id="b24"></td>
-                <td id="b25"></td>
-            </tr>
-        <!-- new notes will be staged from here upon creation -->
-            <tr id="nstart">
-                <td></td>
-            </tr>
-        </table>
-        <table id="legend">
-            <tr>
-                <th>Color</th>
-                <th>Purpose</th>
-            </tr>
-            <tr>
-                <td id="threadL"></td>
-                <td>Family</td>
-            </tr>
-        </table>
-        <table id="UI">
-            <tr>
-                <td>
-                    <form>
-                        <input type="button" value="New Note"/>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <form>
-                        <input type="button" value="New Thread"/>
-                    </form>
-                </td>
-            </tr>
-            <!-- This save button will store the current webmap to be displayed upon next 
-            authorized user login -->
-            <tr>
-                <td>
-                    <form>
-                        <input type="button" value="Save"/>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <form>
-                        <input type="button" value="Clear"/>
-                    </form>
-                </td>
-            </tr>
-        </table>
-    <!-- this div is invisible and unusable until New Note button is clicked -->
-        <div id="ncreate">
-            <form>
-                <label for="title">Note Title</label><br>
-                <input type="text" id="title" name="Title"><br>
-                <label for="contents">Contents</label><br>
-                <input type="text" id="contents" name="Contents"><br><br>
-                <button type="submit">Create</button>
-            </form>
-        </div>
-</main>
+    <header>
+        <h1>Spidernotes</h1>
+        <h3>Build your Web</h3>
+        <nav>
+            <a href="index.html">Login</a>
+            <a href="webmap.html">Webmap</a>
+            <a href="stats.html">Statistics</a>
+            <a href="about.html">About</a>
+        </nav>
+        <hr />
+    </header>
+
+        <!-- This will become actual CSS later -->
+        <style>
+            table {
+                background-color: lightgrey;
+                width: 80%;
+            }
+            tr, td {
+                border: 1px dotted;
+                height: 100px;
+                width: 100px;
+                background-color: white;
+            }
+            #legend {
+                background-color: lightgrey;
+                width: 100px;
+                transform: translate(1000%, 0); 
+            }
+            #threadL {
+                background-color:red;
+            }
+            #UI {
+                width: 100px;
+                transform: translate(1055%, 0)
+            }
+            #ncreate {
+                border: dashed grey;
+            }
+            .note {
+                text-align:center;
+                background-color: beige;
+            }
+        </style>
+        <main>
+            <!-- This will with JS work to create the threads between elements -->
+            <div class="thread" style="background-color: red; text-align:center;">***thread***</div>
+            <table>
+                <tr>
+                    <td id="b1"></td>
+                    <td id="b2"><div class="note">MOM</div></td>
+                    <!-- the Note class will display contents upon cursor hover. Likely will use an API for the drag/drop features-->
+                    <td id="b3"></td>
+                    <td id="b4"></td>
+                    <td id="b5"></td>
+                </tr>
+                <tr>
+                    <td id="b6"></td>
+                    <td id="b7"></td>
+                    <td id="b8"></td>
+                    <td id="b9"></td>
+                    <td id="b10"></td>
+                </tr>
+                <tr>
+                    <td id="b11"></td>
+                    <td id="b12"></td>
+                    <td id="b13"><div class="note">DAD</div></td>
+                    <td id="b14"></td>
+                    <td id="b15"></td>
+                </tr>
+                <tr>
+                    <td id="b16"></td>
+                    <td id="b17"></td>
+                    <td id="b18"></td>
+                    <td id="b19"></td>
+                    <td id="b20"></td>
+                </tr>
+                <tr>
+                    <td id="b21"></td>
+                    <td id="b22"></td>
+                    <td id="b23"></td>
+                    <td id="b24"></td>
+                    <td id="b25"></td>
+                </tr>
+            <!-- new notes will be staged from here upon creation -->
+                <tr id="nstart">
+                    <td></td>
+                </tr>
+            </table>
+            <table id="legend">
+                <tr>
+                    <th>Color</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td id="threadL"></td>
+                    <td>Family</td>
+                </tr>
+            </table>
+            <table id="UI">
+                <tr>
+                    <td>
+                        <form>
+                            <input type="button" value="New Note"/>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="button" value="New Thread"/>
+                        </form>
+                    </td>
+                </tr>
+                <!-- This save button will store the current webmap to be displayed upon next 
+                authorized user login -->
+                <tr>
+                    <td>
+                        <form>
+                            <input type="button" value="Save"/>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="button" value="Clear"/>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        <!-- this div is invisible and unusable until New Note button is clicked -->
+            <div id="ncreate">
+                <form>
+                    <label for="title">Note Title</label><br>
+                    <input type="text" id="title" name="Title"><br>
+                    <label for="contents">Contents</label><br>
+                    <input type="text" id="contents" name="Contents"><br><br>
+                    <button type="submit">Create</button>
+                </form>
+            </div>
+    </main>
 </body>
 <footer>
     <hr />
