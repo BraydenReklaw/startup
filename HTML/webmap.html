@@ -41,6 +41,9 @@
             width: 100px;
             transform: translate(1055%, 0)
         }
+        #ncreate {
+            border: dashed grey;
+        }
     </style>
     <table>
         <tr>
@@ -78,6 +81,10 @@
             <td></td>
             <td></td>
         </tr>
+        <!-- new notes will be staged from here upon creation -->
+        <tr id="nstart">
+            <td></td>
+        </tr>
     </table>
     <table id="legend">
         <tr>
@@ -112,6 +119,16 @@
             </td>
         </tr>
     </table>
+    <!-- this div is invisible and unusable until New Note button is clicked -->
+    <div id="ncreate">
+        <form>
+            <label for="title">Note Title</label><br>
+            <input type="text" id="title" name="Title"><br>
+            <label for="contents">Contents</label><br>
+            <input type="text" id="contents" name="Contents"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 <footer>
     <hr />
