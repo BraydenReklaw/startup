@@ -17,6 +17,7 @@
     <hr />
 </header>
 <body>
+    <!-- This will become actual CSS later -->
     <style>
         table {
             background-color: lightgrey;
@@ -26,6 +27,15 @@
             border: 1px dotted;
             height: 100px;
             width: 100px;
+            background-color: white;
+        }
+        #legend {
+            background-color: lightgrey;
+            width: 100px;
+            transform: translate(1000%, 0); 
+        }
+        #threadL {
+            background-color:red;
         }
     </style>
     <table>
@@ -35,21 +45,8 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -62,6 +59,11 @@
             <td></td>
             <td></td>
             <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -71,18 +73,18 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+        </tr>
+    </table>
+    <table id="legend">
+        <tr>
+            <th>Color</th>
+            <th>Purpose</th>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="threadL"></td>
+            <td>Family</td>
         </tr>
+        
     </table>
 </body>
 <footer>
