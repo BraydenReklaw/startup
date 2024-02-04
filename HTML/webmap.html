@@ -44,12 +44,19 @@
         #ncreate {
             border: dashed grey;
         }
+        .note {
+            text-align:center;
+            background-color: beige;
+        }
     </style>
     <main>
+        <!-- This will with JS work to create the threads between elements -->
+        <div class="thread" style="background-color: red; text-align:center;">***thread***</div>
         <table>
             <tr>
                 <td id="b1"></td>
-                <td id="b2"></td>
+                <td id="b2"><div class="note">MOM</div></td>
+                <!-- the Note class will display contents upon cursor hover -->
                 <td id="b3"></td>
                 <td id="b4"></td>
                 <td id="b5"></td>
@@ -64,7 +71,7 @@
             <tr>
                 <td id="b11"></td>
                 <td id="b12"></td>
-                <td id="b13"></td>
+                <td id="b13"><div class="note">DAD</div></td>
                 <td id="b14"></td>
                 <td id="b15"></td>
             </tr>
