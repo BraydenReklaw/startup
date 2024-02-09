@@ -25,4 +25,11 @@ When it comes to fonts, spidernotes should use a more handwriting styled one. Ch
 meta (element) determines if the code or browser determines display size and rendering (name = "viewport" content="width=device-width, initial-scale=1")
 float:  allows text/element wrapping (use it on ui tools and the picture on about)
 display: none(don't display) block(full width used) inline(only use width as needed) grid (rows/columns dependent upon rendering size) flex(allows flexible elements depending on rendering size, affecting the children of the parent element (footer is child of body))   
-media queries - alter what style of rendering depending on display size (such as hiding an element if screen gets too small)
+media queries - alter what style of rendering depending on display size (such as hiding an element if screen gets too small)  
+## JavaScript
+always interpreting. You won't find an executable anywhere.  use .js files
+console.log() -> print, stdout, etc
+script src="index.js" inside a script tag
+button onclick="sayHello()"   runs the javascript function on click  
+=== for equality (***not ==***)
+in the developemental tools, f12 open, f8 step over, f10 step into
