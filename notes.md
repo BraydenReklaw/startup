@@ -32,4 +32,8 @@ console.log() -> print, stdout, etc
 script src="index.js" inside a script tag
 button onclick="sayHello()"   runs the javascript function on click  
 === for equality (***not ==***)
-in the developemental tools, f12 open, f8 step over, f10 step into
+in the developemental tools, f12 open, f8 step over, f10 step into  
+'0' == 0 is true (typecasting). '0' === 0 is false (str =/= int)  
+pay attention to the arrow functions pages (lambdas)  
+closure - calling a constructor on a function, returning a function with pre-specified parameters and scope  
+use let to define variables
