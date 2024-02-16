@@ -37,3 +37,4 @@ in the developemental tools, f12 open, f8 step over, f10 step into
 pay attention to the arrow functions pages (lambdas)  
 closure - calling a constructor on a function, returning a function with pre-specified parameters and scope  
 use let to define variables
+**pay attention to the JS pages on the site, especially the later half of them!!!**
