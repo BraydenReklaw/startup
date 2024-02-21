@@ -27,7 +27,8 @@ float:  allows text/element wrapping (use it on ui tools and the picture on abou
 display: none(don't display) block(full width used) inline(only use width as needed) grid (rows/columns dependent upon rendering size) flex(allows flexible elements depending on rendering size, affecting the children of the parent element (footer is child of body))   
 media queries - alter what style of rendering depending on display size (such as hiding an element if screen gets too small)  
 ## JavaScript
-always interpreting. You won't find an executable anywhere.  use .js files
+always interpreting. You won't find an executable anywhere.  use .js files  
+use "<script></script>" to reference the page  
 console.log() -> print, stdout, etc
 script src="index.js" inside a script tag
 button onclick="sayHello()"   runs the javascript function on click  
@@ -39,4 +40,18 @@ closure - calling a constructor on a function, returning a function with pre-spe
 use let to define variables
 **pay attention to the JS pages on the site, especially the later half of them!!!**  
 Asynchronous functions are important for "interupting" processes or running multiple things at once. Use Promises  
-pay attention to the pizza example for promises
+pay attention to the pizza example for promises  
+${} for variables amidst "strings" and html code in js  
+when debugging, try to edit code on the document vs in the debugger  
+If i want a function to run regardless of any button press or trigger, just call the function on the .js  
+
+select an element through query selector, then reference it for js to alter what is displayed. pay attention to the simon  
+for the map, read the map and thread count into local storage, on stats, pull thread count out of storage  
+this. when using something from query selector  
+
+async function name 
+*code*
+await 
+*more code*  
+
+JSON.stringify - write to storage. JSON.parse - transfer to usable from storage
