@@ -14,6 +14,8 @@ Go to KMBL 230 Starting Thursday
 
 ## Service
 
+ip: 52.45.118.7
+
 ## HTML
 
 
