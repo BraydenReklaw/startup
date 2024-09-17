@@ -9,13 +9,22 @@ While the base 10 system is the foundation of all math taught to kids, learning 
 
 ### Design
 
-[BinaryBlast.jpg](startup/BinaryBlast.jpg)
+![BinaryBlast](BinaryBlast.jpg)
+
+### Key Features
+
+* Secure Login
+* Start a game
+* Have best score persistent across logins
+* Leaderboard of top 10 scores maintained and updated
+* Display of random Fun Fact upon game completion
+* Other active user score displayed as they complete a game
 
 ### Technologies
 
 The following technologies will be used in these ways:
 
-- HTML - Correct HTML structure, allowing for 3 pages (login, game, leaderboard); hyperlinks between each
+- HTML - Correct HTML structure, allowing for 3 pages (login, game, leaderboard w/ hints); hyperlinks between each
 - CSS - Styling that allows for different sizes. Light matrix aesthetic with simple yet nice colors and contrast
 - React - contains Javascript meshed with the CSS and HTML. Allows for login, gameplay, leaderboard updates, and 
 - Service - Backend service provided for retrieving and posting leaderboard data and a random fun fact provided by an API.
