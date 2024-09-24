@@ -42,4 +42,24 @@ pay attention to how simon-html sets up for elements that will be edited later w
 
 '*'{} -  this is a universal styling guide that can be overridden (ignore the '')
 
+rules -->  p (selecter for paragraphs) {
+    Color(property): green(value);
+}
 
+can be encapsulated in a style tag in html header, a style attribute in the element, or separately on a css page via `<link rel="stylesheet href="styles.css" />`
+
+`font-family:` often give a list of fonts in priority, allowing for browsers to display the font they can
+
+precedence : attribute, style tag, referenced stylesheet
+
+selectors: element ('div', 'p', etc.), ID ('#root', style for this only applies to the element with id='root'), class ('.highlight', syle for this will apply to any elements with class='highlight'), element class ('p.highlight', will apply to any p with class='highlight'), list ('div, body', the style will apply to both these selectors), descendent ('body section', style will apply to any section within the body tags), child ('section > p', only apply if a p is the immediate child of a section), psuedo ('p:hover' state based styling rules that will only apply if conditions are met, such as the mouse hovering over the element)
+
+box model (out to in): margin, border, padding, content
+
+supplying a custom font:
+`@font-face{font-family: 'quicksand'; src: url(url.com);}`
+
+importing a font:
+`@import url(fonturl.com);`
+
+check out animations. need `animation-name: sample;` and `animation-duration` and `@keyframes sample` which involve setting up stages of of the animation.
