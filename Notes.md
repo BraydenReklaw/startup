@@ -67,3 +67,5 @@ check out animations. need `animation-name: sample;` and `animation-duration` an
 `display: None` tell the selector to not be viewerable by user (for utility or viewability of screen). None can also be Block, Inline, Flex, Grid. Block fills screen width, Inline fills content width, flex and grid are variable
 
 check out media queries (define rules for what happens for different view sizes and associated animations)
+
+check out flex
