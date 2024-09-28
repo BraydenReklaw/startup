@@ -48,9 +48,15 @@
 
             <div class="game">
                 <form>
-                    <span id="bin-num">14</span>
-                    <input type="text" id="user-answer" pattern="[0-1]" />
+                    <span id="num_to_convert">14</span>
+                    <input type="text" id="user-answer" pattern="^[01]{1,8}$" title="0 or 1 only" placeholder="00000000" />
                 </form>
+            </div>
+
+            <br />
+<!-- an API will generate a random fun fact upon the completion of a game -->
+            <div class="fact_box">
+                <span id="fact">Fact incoming</span>
             </div>
 
         </main>
