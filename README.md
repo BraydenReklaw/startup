@@ -30,3 +30,14 @@ The following technologies will be used in these ways:
 - Service - Backend service provided for retrieving and posting leaderboard data and a random fun fact provided by an API.
 - DB/ Login - Stores Users and game times in database. Register and login users, credentials being stored and game unable to be played without authentication.
 - Websocket - actively updates leaderboard, gives player a note of other active players achieved score upon their completion
+
+### HTML Deliverable
+
+In this deliverable, i created the html structure for 3 pages of my application
+
+- HTML Pages - created html for 3 pages representing a login, game, and score/info page
+- Links - evtery page has links to every other page
+- Text - a scoreboard that will be updated, and a series of paragraphs explaining the game and binary
+- images - used 2 images to supplement binary description
+- DB/Login - input fields for login. Scores will be updated from database populated with scores generated from giving inputs on the game page tied to user
+- Websocket - other user scores displayed as the scores are generated from finished games. Leaderboard will update in real time
