@@ -10,6 +10,8 @@ code pen assignments : Fork the main assignment and work on the forked pen
 
 check out escape character syntax
 
+ventura@cs.byu.edu
+
 ## Git
 
 use `git commit -am "message here"` to add message in commit command
@@ -69,3 +71,17 @@ check out animations. need `animation-name: sample;` and `animation-duration` an
 check out media queries (define rules for what happens for different view sizes and associated animations)
 
 check out flex
+
+USE BOOTSTRAP!!!!!!
+
+## Java
+
+behavior and computing. Manipulating the DOM using Node
+
+`console.log('Hello' + ' ' + 'world')` - a print statement. `function name(stuff) {stuff used and return}`
+
+`<script src="file"></script>`
+
+`<button onclick="sayHello()>hello</button>` apply a function to a button
+
+check out the script tag on this [website](https://htmlpreview.github.io/?https://github.com/webprogramming260/.github/blob/main/profile/javascript/introduction/jsDemo.html). use the debugger. press the button with sources opened and breakpoint assigned to where you want. `debugger` creates a breakpoint automatically.
