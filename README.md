@@ -41,3 +41,14 @@ In this deliverable, i created the html structure for 3 pages of my application
 - images - used 2 images to supplement binary description
 - DB/Login - input fields for login. Scores will be updated from database populated with scores generated from giving inputs on the game page tied to user
 - Websocket - other user scores displayed as the scores are generated from finished games. Leaderboard will update in real time
+
+### CSS Deliverable
+
+In this deliverable, I created the css styling for the application
+
+- Header, footer, and main content body
+- Navigation elements - made into horizontal list, bootstrapped for style, and highlights on hover
+- Responsive to window resizing - All pages look great except the corner box on game.html will overlap before reaching a size justifying its hiding
+- Application elements - clear contrast, if a bit bland
+- Application text content - consistent font and style
+- Application images - centered, padded, and made responsive
