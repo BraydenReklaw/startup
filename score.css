@@ -1,6 +1,18 @@
+p {
+    padding:10px;
+}
+
+.scoreboard {
+    max-width: 30%; 
+    margin: auto; 
+}
+
 .responsive-img {
-    max-width: 100%;  
-    height: auto;     
+    padding: 5px;
+    max-width: 80%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 
 .flex-container {
