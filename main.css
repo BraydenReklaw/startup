@@ -1,4 +1,24 @@
 * {
     font-family:'Courier New', Courier, monospace;
 }
-  
+
+h1, footer {
+    text-shadow: 0 0 5px #00ff00
+}
+
+
+
+::placeholder {
+    color: #00ff00;
+    opacity: 1;
+}
+
+#BinDropCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
