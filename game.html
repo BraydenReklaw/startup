@@ -25,27 +25,27 @@
                 </menu>
             </nav>
         </header>
-        <hr />
-        <main>
-            <div class="users">
-                User:
-                <span class="user-name">Temporary Name</span>
-            </div>
-            <!-- Scores of other concurrent users are displayed to main user as they play -->
-            <ul class="notifying">
-                <li class="user-name">Baymax scored 6</li>
-                <li class="user-naem">Hiro scored 8</li>
-            </ul>
 
-            <br />
+        <main class="container my-5 text-center flex-grow-1 position-relative">
+            <div class="corner-box position-absolute top-0 start-0 p-3">
+                <div class="users">
+                    User:
+                    <span class="user-name">Temporary Name</span>
+                </div>
+            <!-- Scores of other concurrent users are displayed to main user as they play -->
+                <ul class="notifying mt-3">
+                    <li class="user-name">Baymax scored 6</li>
+                    <li class="user-naem">Hiro scored 8</li>
+                </ul>
+            </div>
 
             <div>
-                <button>Restart</button>
+                <button class="btn btn-outline-success mt-3">Restart</button>
             </div>
 
             <br />
             <!-- Data, such as score and time left, displayed during game-->
-            <div class="mid-game-data">
+            <div class="mid-game-data mt-4">
                 <ul>
                     <li>
                         score:
@@ -57,25 +57,29 @@
                 </ul>
             </div>
 
-            <div class="game">
+            <div class="game mt-4">
                 <form>
-                    <span id="num_to_convert">14</span>
-                    <input type="text" id="user-answer" pattern="^[01]{1,8}$" title="0 or 1 only" placeholder="00000000" />
+                    <span id="num_to_convert" class="display-6">14</span>
+                    <input type="text" id="user-answer" pattern="^[01]{1,8}$" title="0 or 1 only" 
+                    placeholder="00000000" class="form-control text-success border-success mt-3" />
                 </form>
             </div>
 
             <br />
 <!-- an API will generate a random fun fact upon the completion of a game -->
-            <div class="fact_box">
+            <div class="fact_box mt-4">
                 <span id="fact">Fact incoming</span>
             </div>
 
         </main>
-        <footer>
-            <hr />
-            <span class="text-reset">Brayden Walker</span>
-            <br />
-            <a href="https://github.com/BraydenReklaw/startup.git">GitHub</a>
+        <footer class="mt-auto py-3 border-top border-success">
+            <div class="container text-center">
+                <span class="text-reset">Brayden Walker</span>
+                <br />
+                <a href="https://github.com/BraydenReklaw/startup.git" class="text-success">GitHub</a>
+            </div>
         </footer>
+        <canvas id="BinDropCanvas"></canvas>
+        <script src="matrix.js"></script>
     </body>
 </html>
