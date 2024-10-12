@@ -6,12 +6,11 @@ h1, footer {
     text-shadow: 0 0 5px #00ff00
 }
 
-
-
-::placeholder {
-    color: #00ff00;
-    opacity: 1;
+.nav-link:hover {
+    background-color: #00ff00;
+    transition: background-color 0.3s ease-in-out;
 }
+
 
 #BinDropCanvas {
     position: fixed;
