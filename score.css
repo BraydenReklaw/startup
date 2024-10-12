@@ -2,6 +2,10 @@ p {
     padding:10px;
 }
 
+th {
+    padding: 5px;
+}
+
 .scoreboard {
     max-width: 30%; 
     margin: auto; 
