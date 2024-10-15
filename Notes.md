@@ -87,3 +87,14 @@ behavior and computing. Manipulating the DOM using Node
 check out the script tag on this [website](https://htmlpreview.github.io/?https://github.com/webprogramming260/.github/blob/main/profile/javascript/introduction/jsDemo.html). use the debugger. press the button with sources opened and breakpoint assigned to where you want. `debugger` creates a breakpoint automatically.
 
 Promises and Async/Await. Pay attention to the Codepen examples. these allow code to run asynchronously.
+
+Kahoot Notes For Midterm and Studying
+
+- code to load in fonts from google
+- text orientaiton code with flex : column-reversed will flip content order
+- box model - MBPC
+- java execution
+- hmtl elements (<div> is division element)
+- regex
+- java arrays
+- dom oriented java code
