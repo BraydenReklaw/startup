@@ -104,3 +104,9 @@ Node.js - I have run through the node.js stuff and have an example of it in code
 Don't push modules to Github, only need package and package-lock pushed. use a .gitignore file
 
 `fetch("https://localhost:8080")` `app.listen(8080)` an example, also in codeplay (pull from 0ct 17 slides), of a service that listens and responds to a request. run `node listen.js` in terminal to make the service live. go to local host 8080 to then see the effect
+
+## Frameworks
+
+react [experiments](https://codepen.io/BrayDenWalker/pen/JjgrOxK?editors=1010).
+
+`a = {food:"apple"}; a.food` and `{food} = a` is an example of destructering (pull value of food out of object a)
