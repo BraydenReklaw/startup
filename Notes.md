@@ -110,3 +110,9 @@ Don't push modules to Github, only need package and package-lock pushed. use a .
 react [experiments](https://codepen.io/BrayDenWalker/pen/JjgrOxK?editors=1010).
 
 `a = {food:"apple"}; a.food` and `{food} = a` is an example of destructering (pull value of food out of object a)
+
+`import React from "https://cdn.skypack.dev/react"` `import ReactDOM from "https://cdn.skypack.dev/react-dom"`
+
+hooks
+- useState - allows you change states in html using variables
+- useEffect - a function that is run whenever a component is re-rendered
