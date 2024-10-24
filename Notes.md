@@ -116,3 +116,9 @@ react [experiments](https://codepen.io/BrayDenWalker/pen/JjgrOxK?editors=1010).
 hooks
 - useState - allows you change states in html using variables
 - useEffect - a function that is run whenever a component is re-rendered
+
+React mixes html and javascript - components are the building blocks. JSX mixes json and html
+
+router - affects the header currently being used. This will require placing each page into a subdirectory. Pay attention to simon.
+
+toolchain `npm run build`. 
