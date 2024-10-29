@@ -124,3 +124,5 @@ router - affects the header currently being used. This will require placing each
 toolchain `npm run build`. 
 
 copy simon.css into a new directory and run the simon p1 stuff on that new directory (make sure node is installed before doing anything)
+
+https://github.com/mjcleme/simon-react1
