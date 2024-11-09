@@ -7,9 +7,10 @@ import { Game } from './game/game';
 import { Score } from './score&info/score';
 import { AuthState } from './login/authState';
 
-export default function App() {
-  const [authState, setAuthState] = useState(AuthState.Unknown);
-  const [userName, setUserName] = useState('');
+function App() {
+    const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+    const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+    const [authState, setAuthState] = React.useState(currentAuthState);
 
   return (
     <BrowserRouter>
@@ -68,3 +69,5 @@ export default function App() {
 function NotFound() {
   return <main className='container-fluid bg-secondary text-center'>404: Return to sender. Address unknown.</main>;
 }
+
+export default App;
