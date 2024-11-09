@@ -4,7 +4,7 @@ import './game.css';
 export function Game() {
   return (
     <main className="container my-5 text-center flex-grow-1">
-      <div className="corner-box position-absolute top-0 start-0 p-3">
+      <div className="corner-box position-absolute top start-0 p-3">
                 <div className="users">
                     User:
                     <span className="user-name">Temporary Name</span>
