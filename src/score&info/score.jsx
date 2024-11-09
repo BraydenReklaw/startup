@@ -6,33 +6,39 @@ import './score.css';
 export function Score() {
 
     const [scores, setScores] = React.useState([]);
+    const [bestScore, setBestScore] = React.useState(0);
 
     React.useEffect(() => {
-        const scoresText = localStorage.getItem('scores');
-        if (scoresText) {
-            setScores(JSON.parse(scoresText));
-        }
+    const scoresText = localStorage.getItem('scores');
+    if (scoresText) {
+      setScores(JSON.parse(scoresText));
+    }
+
+    const bestScoreText = localStorage.getItem('bestScore');
+    if (bestScoreText) {
+      setBestScore(parseInt(bestScoreText, 10));
+    }
     }, []);
 
-  const scoreRows = [];
-  if (scores.length) {
-    for (const [i, score] of scores.entries()) {
-      scoreRows.push(
-        <tr key={i}>
-          <td>{i}</td>
-          <td>{score.name.split('@')[0]}</td>
-          <td>{score.score}</td>
-          <td>{score.date}</td>
-        </tr>
-      );
-    }
-  } else {
+    const scoreRows = [];
+    if (scores.length) {
+        for (const [i, score] of scores.entries()) {
+        scoreRows.push(
+            <tr key={i}>
+                <td>{i}</td>
+                <td>{score.name.split('@')[0]}</td>
+                <td>{score.score}</td>
+                <td>{score.date}</td>
+                </tr>
+            );
+        }
+    } else {
     scoreRows.push(
       <tr key='0'>
         <td colSpan='4'>Be the first to score</td>
       </tr>
-    );
-  }
+        );
+    }
 
   return (
     <main className="container my-5 text-center flex-grow-1">
@@ -47,28 +53,11 @@ export function Score() {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>TempUser</td>
-                        <td>8</td>
-                        <td>May 20, 2021</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>User</td>
-                        <td>6</td>
-                        <td>June 2, 2021</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Gunter Spears</td>
-                        <td>3</td>
-                        <td>July 3, 2020</td>
-                      </tr>
+                      {scoreRows}
                       <tr id="user_pb">
-                        <td>Best</td>
                         <td>User</td>
-                        <td>6</td>
+                        <td>Best:</td>
+                        <td>{bestScore}</td>
                       </tr>
                     </tbody>
                   </table>
