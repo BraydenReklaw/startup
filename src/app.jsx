@@ -1,9 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { Login } from './login/login';
+import { Game } from './game/game';
+import { Score } from './score&info/score';
 
 export default function App() {
   return (
+    <BrowserRouter>
     <div className="bg-dark text-success d-flex flex-column min-vh-100">
         <header className="py-3 border-bottom border-success">
             <div className="container text-center">
@@ -12,9 +17,9 @@ export default function App() {
             <nav>
                 <menu>
                     <ul className="nav justify-content-center">
-                        <li className="nav-item"><a className="nav-link text-success" href="index.html">Login</a></li>
-                        <li className="nav-item"><a className="nav-link text-success" href="game.html">Play</a></li>
-                        <li className="nav-item"><a className="nav-link text-success" href="score&info.html">Scores & learning</a></li>
+                        <li className="nav-item"><NavLink className="nav-link text-success" href=''>Login</NavLink></li>
+                        <li className="nav-item"><NavLink className="nav-link text-success" to='game'>Play</NavLink></li>
+                        <li className="nav-item"><NavLink className="nav-link text-success" to='score'>Scores & learning</NavLink></li>
                     </ul>
                 </menu>
             </nav>
@@ -30,5 +35,6 @@ export default function App() {
             </div>
         </footer>
     </div>
+    </BrowserRouter>
   )
 }
