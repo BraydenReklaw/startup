@@ -8,9 +8,9 @@ import { Score } from './score&info/score';
 import { AuthState } from './login/authState';
 
 function App() {
-    const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
-    const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
-    const [authState, setAuthState] = React.useState(currentAuthState);
+  const [userName, setUserName] = useState(localStorage.getItem('userName') || '');
+  const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+  const [authState, setAuthState] = useState(currentAuthState);
 
   return (
     <BrowserRouter>
@@ -49,7 +49,7 @@ function App() {
             }
             exact
           />
-          <Route path='/game' element={<Game />} />
+          <Route path='/game' element={<Game userName={userName} />} />
           <Route path='/score' element={<Score />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './game.css';
 
-export function Game() {
+export function Game({ userName }) {
   const [numToConvert, setNumToConvert] = useState(generateRandomNumber());
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(60);
@@ -9,6 +9,10 @@ export function Game() {
   const [bestScore, setBestScore] = useState(localStorage.getItem('bestScore') || 0);
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [fact, setFact] = useState("Fact Incoming");
+  const [otherUsers, setOtherUsers] = useState([
+    { name: "Baymax", score: 6 },
+    { name: "Hiro", score: 8 }
+  ]);
 
   useEffect(() => {
     let timer;
@@ -30,6 +34,17 @@ export function Game() {
       setFact('Seatbelts save lives. Buckle up every time');
     }
   }, [timeLeft, score, bestScore, isGameStarted]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOtherUsers((prevUsers) => [
+        ...prevUsers,
+        { name: generateRandomUsername(), score: generateRandomScore() }
+      ].slice(-4)); // Keep only the latest 4 users
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleInputChange = (e) => {
     setUserAnswer(e.target.value);
@@ -59,11 +74,12 @@ export function Game() {
       <div className="corner-box position-absolute top start-0 p-3">
         <div className="users">
           User:
-          <span className="user-name">Temporary Name</span>
+          <span className="user-name">{userName.split('@')[0]}</span>
         </div>
         <ul className="notifying mt-3">
-          <li className="user-name">Baymax scored 6</li>
-          <li className="user-name">Hiro scored 8</li>
+          {otherUsers.slice(-4).map((user, index) => (
+            <li key={index} className="user-name">{user.name} scored {user.score}</li>
+          ))}
         </ul>
       </div>
       <br />
@@ -118,5 +134,13 @@ export function Game() {
   function generateRandomNumber() {
     return Math.floor(Math.random() * 256);
   }
-}
 
+  function generateRandomUsername() {
+    const usernames = ["Alice", "Bob", "Charlie", "Dave", "Eve"];
+    return usernames[Math.floor(Math.random() * usernames.length)];
+  }
+
+  function generateRandomScore() {
+    return Math.floor(Math.random() * 10) + 1;
+  }
+}
