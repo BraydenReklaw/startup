@@ -1,7 +1,39 @@
 import React from 'react';
 import './score.css';
 
+// much of my table is modeled on simon's excluding the final row.
+
 export function Score() {
+
+    const [scores, setScores] = React.useState([]);
+
+    React.useEffect(() => {
+        const scoresText = localStorage.getItem('scores');
+        if (scoresText) {
+            setScores(JSON.parse(scoresText));
+        }
+    }, []);
+
+  const scoreRows = [];
+  if (scores.length) {
+    for (const [i, score] of scores.entries()) {
+      scoreRows.push(
+        <tr key={i}>
+          <td>{i}</td>
+          <td>{score.name.split('@')[0]}</td>
+          <td>{score.score}</td>
+          <td>{score.date}</td>
+        </tr>
+      );
+    }
+  } else {
+    scoreRows.push(
+      <tr key='0'>
+        <td colSpan='4'>Be the first to score</td>
+      </tr>
+    );
+  }
+
   return (
     <main className="container my-5 text-center flex-grow-1">
         <div className="scoreboard table-dark table-bordered text-success">
