@@ -8,6 +8,7 @@ export function Game() {
   const [userAnswer, setUserAnswer] = useState('');
   const [bestScore, setBestScore] = useState(localStorage.getItem('bestScore') || 0);
   const [isGameStarted, setIsGameStarted] = useState(false);
+  const [fact, setFact] = useState("Fact Incoming");
 
   useEffect(() => {
     let timer;
@@ -26,6 +27,7 @@ export function Game() {
         localStorage.setItem('bestScore', score);
       }
       setIsGameStarted(false);
+      setFact('Seatbelts save lives. Buckle up every time');
     }
   }, [timeLeft, score, bestScore, isGameStarted]);
 
@@ -49,6 +51,7 @@ export function Game() {
     setTimeLeft(60);
     setNumToConvert(generateRandomNumber());
     setUserAnswer('');
+    setFact("Fact Incoming");
   };
 
   return (
@@ -107,7 +110,7 @@ export function Game() {
       </div>
       <br />
       <div className="fact_box mt-4 border-top border-success">
-        <span id="fact">Fact incoming</span>
+        <span className="fact">{fact}</span>
       </div>
     </main>
   );
@@ -116,3 +119,4 @@ export function Game() {
     return Math.floor(Math.random() * 256);
   }
 }
+
