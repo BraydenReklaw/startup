@@ -52,3 +52,16 @@ In this deliverable, I created the css styling for the application
 - Application elements - clear contrast, if a bit bland
 - Application text content - consistent font and style
 - Application images - centered, padded, and made responsive
+
+### React Deliverable
+
+In this deliverable, I implemeneted the React based js functionality for the site.
+
+- Bundled and transpiled - done!
+- Components - Login, Game, Scores
+    - Login is based on Simon and works, except for some styling errors
+    - database - best score is persistnet and stored locally. global high scores from all simulated players are not
+    - Websocket is simulated, displaying the scores of users 4 at a time
+    - The Game runs, but is currently exceptionally difficult. A learning curve needs to be implemented
+- Router - Routing between all elements
+- Hooks - states and effects in active use throughout functionality.
