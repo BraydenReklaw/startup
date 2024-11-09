@@ -25,7 +25,12 @@ export default function App() {
             </nav>
         </header>
 
-        <main>App components here</main>
+        <Routes>
+            <Route path='/' element={<Login />} exact />
+            <Route path='/game' element={<Game />} />
+            <Route path='/score' element={<Score />} />
+            <Route path='*' element={<NotFound />} />
+        </Routes>
 
         <footer className="mt-auto py-3 border-top border-success">
             <div className="container text-center">
@@ -38,3 +43,7 @@ export default function App() {
     </BrowserRouter>
   )
 }
+
+function NotFound() {
+    return <main className='container-fluid bg-secondary text-center'>404: Return to sender. Address unknown.</main>;
+  }
