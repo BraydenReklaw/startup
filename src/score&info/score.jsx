@@ -34,7 +34,7 @@ export function Score() {
                         <td>July 3, 2020</td>
                       </tr>
                       <tr id="user_pb">
-                        <td>#</td>
+                        <td>Best</td>
                         <td>User</td>
                         <td>6</td>
                       </tr>
