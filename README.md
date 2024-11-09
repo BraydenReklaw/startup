@@ -9,7 +9,7 @@ While the base 10 system is the foundation of all math taught to kids, learning 
 
 ### Design
 
-![BinaryBlast](BinaryBlast.jpg)
+![BinaryBlast](public/BinaryBlast.jpg)
 
 ### Key Features
 
