@@ -130,3 +130,13 @@ https://github.com/mjcleme/simon-react1
 ## API and Socket
 
 make sure your api has CORS
+
+## Service
+
+PM2 keeps node service running (the missing step 4 in deploy script) regardless of active use of the service.
+
+All endpoints and express should be put into index.js (will be created)
+
+`npm run dev` and then `o` allows debugging through dev tools
+
+pay attention to vite.config.js - you will need to eventually create and use this for local debugging
