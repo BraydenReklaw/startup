@@ -140,3 +140,7 @@ All endpoints and express should be put into index.js (will be created)
 `npm run dev` and then `o` allows debugging through dev tools
 
 pay attention to vite.config.js - you will need to eventually create and use this for local debugging
+
+pay attention to the use of dbconfig.js - prevents hardcoding login authentication stuff. add it to .gitignore.
+
+don't store unmodified passwords! hash it, or alter it (encrypt it)
