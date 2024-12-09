@@ -45,6 +45,18 @@ export function Game({ userName }) {
       console.error('Failed to save score:', error);
     }
   }
+  
+  // 3rd-party api featured here
+  async function fetchFact() {
+    try {
+      const response = await fetch('http://numbersapi.com/random/math?json');
+      const data = await response.json();
+      setFact(data.text);
+    } catch (error) {
+      console.error('Failed to fetch fact:', error);
+      setFact('Could not fetch a fact. Please try again later.');
+    }
+  }
 
   useEffect(() => {
     if (timeLeft === 0 && isGameStarted) {
@@ -53,7 +65,7 @@ export function Game({ userName }) {
         localStorage.setItem('bestScore', score);
       }
       setIsGameStarted(false);
-      setFact('Seatbelts save lives. Buckle up every time');
+      fetchFact();
       saveScore(score, userName);
     }
   }, [timeLeft, score, bestScore, isGameStarted]);
