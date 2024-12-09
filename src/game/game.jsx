@@ -23,7 +23,20 @@ export function Game({ userName }) {
     }
     return () => clearInterval(timer);
   }, [isGameStarted]);
+  
+  async function saveScore(score, userName) {
+    const date = new Date().toLocaleDateString();
+    const newScore = { name: userName, score: score, date: date };
 
+    console.log('Saving score:', newScore); // Debugging log
+  
+    await fetch('/api/score', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newScore),
+    });
+  }
+// end of game
   useEffect(() => {
     if (timeLeft === 0 && isGameStarted) {
       if (score > bestScore) {
@@ -32,6 +45,8 @@ export function Game({ userName }) {
       }
       setIsGameStarted(false);
       setFact('Seatbelts save lives. Buckle up every time');
+      // call and save my scores
+      saveScore(score, userName);
     }
   }, [timeLeft, score, bestScore, isGameStarted]);
 
@@ -49,7 +64,7 @@ export function Game({ userName }) {
   const handleInputChange = (e) => {
     setUserAnswer(e.target.value);
   };
-
+// new number set up
   const handleSubmit = (e) => {
     e.preventDefault();
     if (parseInt(userAnswer, 2) === numToConvert) {
@@ -68,6 +83,8 @@ export function Game({ userName }) {
     setUserAnswer('');
     setFact("Fact Incoming");
   };
+
+  
 
   return (
     <main className="container my-5 text-center flex-grow-1">
@@ -132,7 +149,7 @@ export function Game({ userName }) {
   );
 
   function generateRandomNumber() {
-    return Math.floor(Math.random() * 256);
+    return Math.floor(Math.random() * 9);
   }
 
   function generateRandomUsername() {

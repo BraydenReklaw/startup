@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './score.css';
 
 // much of my table is modeled on simon's excluding the final row.
@@ -8,11 +8,13 @@ export function Score() {
     const [scores, setScores] = React.useState([]);
     const [bestScore, setBestScore] = React.useState(0);
 
-    React.useEffect(() => {
-    const scoresText = localStorage.getItem('scores');
-    if (scoresText) {
-      setScores(JSON.parse(scoresText));
-    }
+    useEffect(() => {
+      // Fetch scores from the API
+      fetch('/api/scores')
+        .then((response) => response.json())
+        .then((scores) => {
+          setScores(scores);
+        });
 
     const bestScoreText = localStorage.getItem('bestScore');
     if (bestScoreText) {
