@@ -20,7 +20,7 @@ Always pull before doing anything
 
 ## Service
 
-ip: 52.45.118.7
+ip: 44.221.9.219
 
 ## HTML
 
