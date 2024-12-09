@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './game.css';
 
 export function Game({ userName }) {
-  const [numToConvert, setNumToConvert] = useState(generateRandomNumber());
+  const [numToConvert, setNumToConvert] = useState(generateRandomNumber(8));
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(10);
+  const [timeLeft, setTimeLeft] = useState(60);
   const [userAnswer, setUserAnswer] = useState('');
   const [bestScore, setBestScore] = useState(localStorage.getItem('bestScore') || 0);
   const [isGameStarted, setIsGameStarted] = useState(false);
@@ -13,6 +13,7 @@ export function Game({ userName }) {
     { name: "Baymax", score: 6 },
     { name: "Hiro", score: 8 }
   ]);
+  const [maxNumber, setMaxNumber] = useState(8);
 
   useEffect(() => {
     let timer;
@@ -23,13 +24,13 @@ export function Game({ userName }) {
     }
     return () => clearInterval(timer);
   }, [isGameStarted]);
-  
+
   async function saveScore(score, userName) {
     const date = new Date().toLocaleDateString();
     const newScore = { name: userName, score: score, date: date };
 
     console.log('Saving score:', newScore); // Debugging log
-  
+
     try {
       const response = await fetch('/api/score', {
         method: 'POST',
@@ -44,7 +45,7 @@ export function Game({ userName }) {
       console.error('Failed to save score:', error);
     }
   }
-// end of game
+
   useEffect(() => {
     if (timeLeft === 0 && isGameStarted) {
       if (score > bestScore) {
@@ -53,7 +54,6 @@ export function Game({ userName }) {
       }
       setIsGameStarted(false);
       setFact('Seatbelts save lives. Buckle up every time');
-      // call and save my scores
       saveScore(score, userName);
     }
   }, [timeLeft, score, bestScore, isGameStarted]);
@@ -72,13 +72,19 @@ export function Game({ userName }) {
   const handleInputChange = (e) => {
     setUserAnswer(e.target.value);
   };
-// new number set up
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (parseInt(userAnswer, 2) === numToConvert) {
-      setScore(score + 1);
+      const newScore = score + 1;
+      setScore(newScore);
       setTimeLeft(timeLeft + 10);
-      setNumToConvert(generateRandomNumber());
+
+      if (newScore % 4 === 0) {
+        setMaxNumber((prevMax) => Math.min(prevMax * 2, 256));
+      }
+
+      setNumToConvert(generateRandomNumber(maxNumber));
       setUserAnswer('');
     }
   };
@@ -87,12 +93,11 @@ export function Game({ userName }) {
     setIsGameStarted(true);
     setScore(0);
     setTimeLeft(60);
-    setNumToConvert(generateRandomNumber());
+    setMaxNumber(8);
+    setNumToConvert(generateRandomNumber(8));
     setUserAnswer('');
     setFact("Fact Incoming");
   };
-
-  
 
   return (
     <main className="container my-5 text-center flex-grow-1">
@@ -156,8 +161,8 @@ export function Game({ userName }) {
     </main>
   );
 
-  function generateRandomNumber() {
-    return Math.floor(Math.random() * 9);
+  function generateRandomNumber(max) {
+    return Math.floor(Math.random() * max);
   }
 
   function generateRandomUsername() {
