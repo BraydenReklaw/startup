@@ -10,11 +10,21 @@ export function Score() {
 
     useEffect(() => {
       // Fetch scores from the API
-      fetch('/api/scores')
-        .then((response) => response.json())
-        .then((scores) => {
+      const fetchScores = async () => {
+        try {
+          const response = await fetch('/api/scores');
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const scores = await response.json();
+          console.log('Fetched scores:', scores); // Debugging log
           setScores(scores);
-        });
+        } catch (error) {
+          console.error('Failed to fetch scores:', error);
+        }
+      };
+    
+    fetchScores();
 
     const bestScoreText = localStorage.getItem('bestScore');
     if (bestScoreText) {

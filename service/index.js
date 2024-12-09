@@ -7,11 +7,6 @@ let scores = [];
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
-//  pulled from simon, demonstrating curl response
-app.get('*', (_req, res) => {
-  res.send({ msg: 'Startup service' });
-});
-
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
@@ -63,10 +58,15 @@ apiRouter.post('/auth/create', async (req, res) => {
     res.send(scores);
   });
   
-  // SubmitScore
-  apiRouter.post('/score', (req, res) => {
-    scores = updateScores(req.body, scores);
-    res.send(scores);
+// SubmitScore
+apiRouter.post('/score', (req, res) => {
+    try {
+      scores = updateScores(req.body, scores);
+      res.status(201).send(scores);
+    } catch (error) {
+      console.error('Error saving score:', error);
+      res.status(500).send({ error: 'Failed to save score' });
+    }
   });
   
   // updateScores considers a new score for inclusion in the high scores.

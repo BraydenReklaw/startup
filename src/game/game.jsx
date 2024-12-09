@@ -4,7 +4,7 @@ import './game.css';
 export function Game({ userName }) {
   const [numToConvert, setNumToConvert] = useState(generateRandomNumber());
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(60);
+  const [timeLeft, setTimeLeft] = useState(10);
   const [userAnswer, setUserAnswer] = useState('');
   const [bestScore, setBestScore] = useState(localStorage.getItem('bestScore') || 0);
   const [isGameStarted, setIsGameStarted] = useState(false);
@@ -30,11 +30,19 @@ export function Game({ userName }) {
 
     console.log('Saving score:', newScore); // Debugging log
   
-    await fetch('/api/score', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(newScore),
-    });
+    try {
+      const response = await fetch('/api/score', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newScore),
+      });
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      console.log('Score saved successfully');
+    } catch (error) {
+      console.error('Failed to save score:', error);
+    }
   }
 // end of game
   useEffect(() => {
