@@ -65,3 +65,13 @@ In this deliverable, I implemeneted the React based js functionality for the sit
     - The Game runs, but is currently exceptionally difficult. A learning curve needs to be implemented
 - Router - Routing between all elements
 - Hooks - states and effects in active use throughout functionality.
+
+### Service Deliverable
+
+In this deliverable, front and back end service implementation was created.
+
+- Node.js/express HTTP service - completed
+- Static middleware for frontend - implemented
+- Calls to third party endpoints -
+- Backend service endpoints - placeholders for score and user storage created
+- Frontend calls service endpoints - Fetch implemented, scores are successfully saved, could populate table, can't after deployment
