@@ -72,6 +72,6 @@ In this deliverable, front and back end service implementation was created.
 
 - Node.js/express HTTP service - completed
 - Static middleware for frontend - implemented
-- Calls to third party endpoints -
+- Calls to third party endpoints - call goes out, works on local testing, not on deployment
 - Backend service endpoints - placeholders for score and user storage created
-- Frontend calls service endpoints - Fetch implemented, scores are successfully saved, could populate table, can't after deployment
+- Frontend calls service endpoints - Fetch implemented, scores are successfully saved
